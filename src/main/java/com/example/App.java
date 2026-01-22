@@ -1,10 +1,15 @@
 package com.example;
 
+import javafx.geometry.Pos;
+import javafx.scene.layout.HBox;
+import com.example.atom.button.SearchButton;
+import com.example.atom.input.Textfield;
 import com.example.atom.text.TitleText;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -20,7 +25,21 @@ public class App extends Application {
         // 2. Crée l'interface
         BorderPane root = new BorderPane();
         TitleText title = new TitleText();
-        root.setCenter(title);
+        Textfield textfield = new Textfield();
+        SearchButton searchButton = new SearchButton();
+
+        //Alignement des elements 
+        HBox hbox = new HBox();
+        hbox.setSpacing(10);
+        hbox.getChildren().addAll(textfield, searchButton);
+        hbox.setAlignment(Pos.CENTER);
+
+        VBox vbox = new VBox();
+        vbox.setSpacing(20);
+        vbox.getChildren().addAll(title, hbox);
+        vbox.setAlignment(Pos.CENTER);
+
+        root.setCenter(vbox);
 
         // 3. Affiche
         Scene scene = new Scene(root, 640, 480);
