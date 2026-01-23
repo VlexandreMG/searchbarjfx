@@ -1,5 +1,5 @@
-com/example/atom/text/TitleText.class
 com/example/App.class
 com/example/atom/button/SearchButton.class
-com/example/atom/BaseComponent.class
 com/example/atom/input/Textfield.class
+com/example/atom/text/TitleText.class
+com/example/atom/BaseComponent.class
