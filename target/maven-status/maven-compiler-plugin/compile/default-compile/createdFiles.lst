@@ -1,5 +1,8 @@
+com/example/db/ConnectionOr.class
 com/example/App.class
 com/example/atom/button/SearchButton.class
 com/example/atom/input/Textfield.class
+com/example/dao/WordDAO.class
+com/example/model/Word.class
 com/example/atom/text/TitleText.class
 com/example/atom/BaseComponent.class
