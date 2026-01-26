@@ -12,6 +12,10 @@ import com.example.db.ConnectionOr;
 import com.example.model.Word;
 
 public class WordDAO {
+
+    public WordDAO() {
+        
+    }
     
     // Récupérer tous les mots
     public List<Word> getAllWords() throws SQLException {

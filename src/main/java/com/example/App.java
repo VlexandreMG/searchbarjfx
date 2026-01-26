@@ -1,14 +1,15 @@
 package com.example;
 
-import javafx.geometry.Pos;
-import javafx.scene.layout.HBox;
 import com.example.atom.button.SearchButton;
 import com.example.atom.input.Textfield;
+import com.example.atom.list.SuggestionList;
 import com.example.atom.text.TitleText;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -27,6 +28,7 @@ public class App extends Application {
         TitleText title = new TitleText();
         Textfield textfield = new Textfield();
         SearchButton searchButton = new SearchButton();
+        SuggestionList suggestionList = new SuggestionList();
 
         //Alignement des elements 
         HBox hbox = new HBox();
@@ -36,7 +38,7 @@ public class App extends Application {
 
         VBox vbox = new VBox();
         vbox.setSpacing(20);
-        vbox.getChildren().addAll(title, hbox);
+        vbox.getChildren().addAll(title, hbox, suggestionList);
         vbox.setAlignment(Pos.CENTER);
 
         root.setCenter(vbox);
