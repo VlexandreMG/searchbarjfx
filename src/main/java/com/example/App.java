@@ -15,20 +15,26 @@ import javafx.stage.Stage;
 
 public class App extends Application {
 
-    @Override 
+    @Override
     public void start(Stage primaryStage) {
         // 1. CHARGE LA POLICE (seulement cette ligne)
         javafx.scene.text.Font.loadFont(
-            getClass().getResourceAsStream("/fonts/JapanKimono.ttf"),
-            14
+                getClass().getResourceAsStream("/fonts/JapanKimono.ttf"),
+                14
         );
-        
+
         // 2. Crée l'interface
         BorderPane root = new BorderPane();
         TitleText title = new TitleText();
         Textfield textfield = new Textfield();
         SearchButton searchButton = new SearchButton();
         SuggestionList suggestionList = new SuggestionList();
+
+        //Mampande anle à chaque fois que je tape 
+        textfield.setOnTextChanged(newText -> {
+            suggestionList.filterSuggestions(newText);
+            suggestionList.setVisible(newText != null && !newText.trim().isEmpty());
+        });
 
         //Alignement des elements 
         HBox hbox = new HBox();
