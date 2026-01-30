@@ -17,6 +17,8 @@ public class WordDAO {
         
     }
     
+
+    
     // Récupérer tous les mots
     public List<Word> getAllWords() throws SQLException {
         List<Word> words = new ArrayList<>();
