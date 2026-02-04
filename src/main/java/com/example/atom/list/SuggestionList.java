@@ -44,7 +44,11 @@ public class SuggestionList extends BaseComponent {
 
     @Override
     protected void setupEventHandlers() {
-        // Pas d'événements pour l'instant 
+        // Affiche un mot selectionné lony 
+        listView.setOnMouseClicked(e -> {
+            String choosen = (listView.getSelectionModel().getSelectedItem()).toString();
+            // System.out.println("Le mot selectionné est : " + choosen);
+        }); 
     }
 
     @Override
