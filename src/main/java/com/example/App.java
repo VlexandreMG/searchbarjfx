@@ -4,6 +4,7 @@ import com.example.atom.button.SearchButton;
 import com.example.atom.input.Textfield;
 import com.example.atom.list.SuggestionList;
 import com.example.atom.text.TitleText;
+import com.example.model.WordClickListener;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -34,6 +35,15 @@ public class App extends Application {
         textfield.setOnTextChanged(newText -> {
             suggestionList.filterSuggestions(newText);
             suggestionList.setVisible(newText != null && !newText.trim().isEmpty());
+        });
+
+        //Changement de page au clic de la suggestion 
+        suggestionList.setOnWordClicked(new WordClickListener() {
+            @Override
+            public void onWorldClicked(String word) {
+                showDetailPage(word);
+            }
+            
         });
 
         //Alignement des elements 

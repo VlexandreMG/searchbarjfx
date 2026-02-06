@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import com.example.atom.BaseComponent;
 import com.example.dao.WordDAO;
 import com.example.model.Word;
+import com.example.model.WordClickListener;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -20,6 +21,11 @@ public class SuggestionList extends BaseComponent {
     private VBox vbox;
     private WordDAO wordDAO;
     private ObservableList<String> allWords; // Stocke tous les mots pour le filtrage
+    private WordClickListener wordClickListener;
+
+    public void setOnWordClicked(WordClickListener listener) {
+    this.wordClickListener = listener;
+}
 
     @Override
     protected void createComponents() {
@@ -48,6 +54,10 @@ public class SuggestionList extends BaseComponent {
         listView.setOnMouseClicked(e -> {
             String choosen = (listView.getSelectionModel().getSelectedItem()).toString();
             // System.out.println("Le mot selectionné est : " + choosen);
+            if (choosen != null && wordClickListener != null) {
+                wordClickListener.onWordClicked(choosen);
+
+            }
         }); 
     }
 
