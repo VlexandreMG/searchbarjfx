@@ -40,8 +40,8 @@ public class App extends Application {
         //Changement de page au clic de la suggestion 
         suggestionList.setOnWordClicked(new WordClickListener() {
             @Override
-            public void onWorldClicked(String word) {
-                showDetailPage(word);
+            public void onWordClicked(String word) {
+                //showDetailPage(word);
             }
             
         });

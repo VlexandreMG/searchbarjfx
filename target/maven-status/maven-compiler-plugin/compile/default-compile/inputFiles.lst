@@ -5,5 +5,6 @@
 /home/balou/S3/PROG/PROJETS/searchbarjfx/src/main/java/com/example/App.java
 /home/balou/S3/PROG/PROJETS/searchbarjfx/src/main/java/com/example/dao/WordDAO.java
 /home/balou/S3/PROG/PROJETS/searchbarjfx/src/main/java/com/example/atom/input/Textfield.java
+/home/balou/S3/PROG/PROJETS/searchbarjfx/src/main/java/com/example/model/WordClickListener.java
 /home/balou/S3/PROG/PROJETS/searchbarjfx/src/main/java/com/example/atom/text/TitleText.java
 /home/balou/S3/PROG/PROJETS/searchbarjfx/src/main/java/com/example/db/ConnectionOr.java
