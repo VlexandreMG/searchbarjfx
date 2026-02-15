@@ -9,10 +9,13 @@ public class ClassicButton extends BaseComponent {
     private Button button;
     private String text;
 
+    public ClassicButton(String text) {
+        this.text = text;
+    }
+
     @Override
     protected void createComponents() {
-        button = new Button();
-        text = new String();
+        button = new Button(text);
     }
 
     @Override
