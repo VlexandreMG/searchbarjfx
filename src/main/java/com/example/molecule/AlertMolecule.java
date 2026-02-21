@@ -15,7 +15,7 @@ public class AlertMolecule extends BaseComponent {
 
     @Override
     protected void createComponents() {
-        closeButton = new ClassicButton();
+        closeButton = new ClassicButton("close");
         alertText = new SimpleText();
         titleText = new TitleText();
         vbox = new VBox();
